@@ -1,0 +1,528 @@
+:root {
+    --text: rgb(21, 26, 34);
+    --darkest: rgb(73, 84, 100);
+    --dark: rgb(187, 191, 202);
+    --light: rgb(238, 238, 238);
+    --lightest: rgb(248, 248, 244);
+
+    --eggshell: rgb(247, 247, 244);
+
+    --serene-green: rgb(140, 153, 135);
+    --forest-green: rgb(124, 148, 115);
+
+    --inky: #22223b;
+    --night: #4a4e69;
+    --dessert-night: #8f838d;
+    --dessert: #cfb4ae;
+    --sand: #f2e9e4;
+
+    --focus-orange: #f17d3f;
+    --focus-yellow: rgb(243, 185, 59);
+}
+
+* {
+    font-size: 18px;
+    line-height: 1.5rem;
+}
+
+/* global element styling here */
+
+body {
+    font-family: "Garamond", "Georgia", "Times New Roman", Times, serif;
+    background-color: var(--dark);
+    color: var(--text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Garamond", "Georgia", "Times New Roman", Times, serif;
+    line-height: 1;
+    margin: 1.5rem 0;
+}
+
+h1 { 
+    font-size: 3.8rem; 
+    color: var(--darkest);
+}
+
+h2 { 
+    font-size: 1.8rem;
+    line-height: 2rem;
+    color: var(--sand);
+    text-align: center;
+}
+
+h3 { 
+    font-size: 1.2rem; 
+    color: var(--darkest);
+    margin: 0;
+}
+
+p {
+    text-align: center;
+    margin: 1rem 0;
+    line-height: 1.5rem;
+}
+
+a, a:hover {
+    text-decoration: none;
+    font-family: "Proxima Nova", "Europa", "Helvetica", Arial, sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+/* specific class for italics to use as needed in html 
+(no semantic value here so that's why em is not being used) */
+.italicised {
+    font-style: italic;
+}
+
+
+/* HEADER elements */
+
+/* global header elements placed towards the top, more specific classes towards the bottom */
+header, footer {
+    border: 1px solid var(--light);
+    background: var(--light) url(../images/textured-white.jpg) no-repeat;
+    background-size: cover;
+}
+
+header p {
+    text-align: left;
+}
+
+header a {
+    background-color: var(--eggshell);
+    color: var(--darkest);
+
+    padding: 0.5rem 0.65rem;
+    border: 0.08rem solid var(--darkest);
+    border-radius: 0.85rem;
+}
+
+/* platforms-list is in contact section */
+header a:hover,
+header a:focus,
+.platforms-list a:hover,
+.platforms-list a:focus {
+    background-color: var(--serene-green);
+    color: var(--lightest);
+    border-color: var(--serene-green);
+}
+
+header a:focus {
+    outline: 0.12rem solid var(--focus-orange);
+    border-color: var(--lightest);
+}
+
+/* adding min-height to ensure small screens can view the header as nicely as big screens */
+.header-row {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 350px;
+    margin: 6% 4%;
+}
+
+.header-container {
+    flex: 1 0 100%;
+}
+
+/* more contact-form styling is found towards the bottom of the css sheet */
+.intro,
+.contact-form input {
+    margin-bottom: 1.5rem;
+}
+
+.main-nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav li {
+    display: inline;
+    flex: 1 0 100%;
+    line-height: 2.8rem;
+}
+
+.about-item {
+    display: inline;
+}
+
+
+/* MAIN elements */
+
+/* this section row controls the flex in each of the following html blocks: 
+about, portfolio, contact  */
+section.row {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    margin: 2rem 0.3rem;
+}
+
+
+/* MAIN: about me section */
+
+/* style the flex container for both 'about me' and 'contact' sections */
+.content-container {
+    flex: 1 0 100%;
+    max-width: 100%;
+    background-color: var(--darkest);
+    color: var(--light);
+    border-radius: 1.2rem;
+    box-shadow: 0 0 0 0.1rem rgba(244, 244, 242, 0.5);
+    overflow: hidden;
+    margin: 0.5rem 0;
+}
+
+/* styling of actual content for both 'about me' and 'contact' sections */
+.content-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    height: 100%;
+    padding: 1rem 0.6rem;
+    margin-bottom: 0.3rem;
+}
+
+.about-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    color: var(--dessert);
+    margin: 1rem;
+}
+
+li p {
+    display: inline;
+    line-height: 0.5rem;
+}
+
+/* using pseudo elements to style the about-me list */
+
+.about-item::after {
+    content: "•";
+    color: var(--dessert-night);
+    padding-right: 0.3rem;
+}
+
+/* portrait box won't appear anywhere else so it gets its own ID */
+#portrait {
+    display: flex;
+    min-height: 100%;
+}
+
+#portrait img {
+    max-width: 100%; 
+    height: auto; 
+    object-fit: cover;
+}
+
+
+/* MAIN: portfolio section */
+
+/* this one h2 the colour should be dark because the section has a light background colour */
+.portfolio-row h2 {
+    color: var(--darkest);
+}
+
+.portfolio-row {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    background-color: var(--light);
+    padding: 0;
+}
+
+/* the following two classes are for the intro text to the portfolio section */
+#portfolio-text-container {
+    flex: 0 0 100%;
+    margin-bottom: 1.5rem;
+}
+
+#portfolio-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* showcase container is for the main application */
+#showcase-container {
+    flex: 3 0 100%;
+    width: 100%;
+    height: 50vh;
+    box-shadow: 0 0.2rem 0.4rem rgba(73, 84, 100, 0.3);
+    margin-bottom: 1.5rem;
+}
+
+/* styling the following four application displays, which are smaller */
+.portfolio-container {
+    flex: 1 0 auto;
+    width: 100%;
+    height: 25vh;
+    box-shadow: 0 0.2rem 0.4rem rgba(73, 84, 100, 0.3);
+    margin-bottom: 1.5rem;
+}
+
+/* make the application display cards as links */
+a.gallery-card,
+a#showcase-card {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 25vh;
+    background-color: var(--serene-green);
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+}
+
+/* specify different height for showcase application */
+a#showcase-card {
+    height: 50vh;
+}
+
+/* making sure display card images fill up the holding container */
+.gallery-card img,
+#showcase-card img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    object-position: top right;
+}
+
+/* styling for text associated with application display image */
+.gallery-card p,
+#showcase-card p {
+    position: absolute;
+    width: 100%;
+    bottom: 5%;
+    left: 0;
+    text-align: left;
+    background-image: linear-gradient(to left, rgba(255,255,255,0.5), var(--lightest));
+    color: var(--darkest);
+    padding: 0.5rem;
+}
+
+/* hover effects for both showcase and regular app displays below */
+.gallery-card:hover,
+#showcase-card:hover {
+    box-shadow: 0 0.2rem 0.4rem var(--darkest);
+    transition: all 0.2s ease-out;
+}
+
+.gallery-card:hover p,
+.gallery-card:focus p,
+#showcase-card:hover p,
+#showcase-card:focus p {
+    background-image: linear-gradient(to right, var(--darkest), rgba(255,255,255,0));
+    color: var(--lightest);
+}
+
+.gallery-card:focus,
+#showcase-card:focus {
+    outline: 0.18rem solid var(--focus-orange);
+}
+
+.gallery-card:focus p,
+#showcase-card:focus p {
+    outline: 0.12rem dashed var(--inky);
+}
+
+
+/* MAIN: contact section */
+
+p.line-break {
+    white-space: pre-line;
+}
+
+/* contact form styling */
+#contact-form-h2 {
+    margin-bottom: 0rem;
+}
+
+.contact-form {
+    text-align: left;
+    line-height: 2rem;
+    margin: 1.5rem 0;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+/* make the placeholder text a different colour */
+::placeholder {
+    color: var(--dark);
+}
+
+/* style the input and textareas */
+input[type=text], textarea {
+    min-width: 100%;
+    font-family: "Proxima Nova", "Europa", "Helvetica", Arial, sans-serif;
+    font-weight: 300;
+    background-color: var(--lightest);
+    color: var(--text);
+    border:0;
+    border-radius: 0.4rem;
+    padding:10px;
+}
+
+/* textarea is adjustable, but putting a minimum on height and width so users don't mess up the text area */
+textarea {
+    min-width: 100%;
+    max-width: 40vw;
+    min-height: 10%;
+    max-height: 50vh;
+}
+
+input[type=text]:focus, 
+textarea:focus {
+    outline-color: var(--text);
+    box-shadow: 0 0 0.7rem 0.2rem var(--forest-green);
+}
+
+/* styling the button */
+.contact-form button {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 150px;
+    background-color: var(--eggshell);
+    color: var(--darkest);
+    font-family: "Proxima Nova", "Europa", "Helvetica", Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    border: 0.1rem solid var(--inky);
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+    margin-top: 1rem;
+}
+
+.contact-form button:hover,
+.contact-form button:focus {
+    background-color: var(--serene-green);
+    color: var(--lightest);
+    border-color: var(--lightest);
+    cursor: pointer;
+}
+
+.contact-form button:focus {
+    outline: 0.15rem solid var(--focus-orange);
+}
+
+/* styling for 'additional platforms' below */
+.contact-platforms li img {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.35rem;
+}
+
+.platforms-list {
+    display: flex;
+}
+
+.platforms-list a {
+    color: var(--lightest);
+    padding: 0.2rem 0.5rem;
+}
+
+.platforms-list a:focus {
+    outline: 0.1rem solid var(--focus-orange);
+}
+
+
+/* FOOTER elements */
+
+footer {
+    height: 6vh;
+    text-align: center;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container {
+    flex: 1;
+}
+
+
+/* MEDIA QUERIES */
+
+/* the base css was made using mobile first design to suit the Galaxy Fold first (280px wide). Media queries scale upwards from 281px */
+
+@media screen and (min-width: 374px) {
+    .header-container {
+        width: 100%;
+    }
+
+    .main-nav li {
+        flex: 0;
+    }
+
+    section.row {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .about-list::before {
+    content: "•";
+    color: var(--dessert-night);
+    padding-right: 0.3rem;
+}
+
+    .content-card {
+        padding: 1rem 2.5rem;
+    }
+}
+
+@media screen and (min-width: 539px) {
+     .header-row {
+        flex-direction: row;
+        margin: 6%;
+    }
+
+    .main-nav {
+        justify-content: flex-end;
+    }
+
+    .main-nav li {
+        line-height: 1rem;
+        margin-left: 2rem;
+    }
+
+    section.row {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    
+    .portfolio-row {
+        flex-direction: row;
+        padding: 2rem;
+    }
+}
+
+@media screen and (min-width: 770px) {
+    section.row {
+        justify-content: space-between;
+    }
+    
+    .portfolio-row {
+        padding: 1rem 2rem;
+    }
+
+    .content-container, .portfolio-container {
+        flex: 1 0 48%;
+        max-width: 48%;
+    }
+}

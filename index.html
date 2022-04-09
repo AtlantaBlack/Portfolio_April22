@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushan Yue &#183; web developer</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <!-- header-row is the house (parent) for flexbox -->
+        <div class="header-row">
+            <!-- there are two flex children in this house -->
+
+            <div class="header-container">
+                <section class="intro">
+                    <h1>Hi, I'm Sushan</h1>
+                    <p class="italicised">it's a pleasure to meet you</p>
+                </section>  
+            </div>
+
+            <div class="header-container">
+                <nav>
+                    <ul class="main-nav">
+                        <li>
+                            <a href="#about-me">About</a></li>
+                        <li>
+                            <a href="#portfolio">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- main section -->
+    <main>
+     <!-- 'about' section -->
+        <section class="row" id="about-me">
+            <!-- 'about' has two children in its flex house -->
+
+            <div class="content-container">
+                <section class="content-card">
+                    <h2>Sushan Yue</h2>
+
+                    <ul class="about-list italicised">
+                        <li class="about-item">
+                            <p>fledgling web developer</p>
+                        </li>
+                        <li class="about-item">
+                            <p>illustrator</p>
+                        </li>
+                        <li class="about-item">
+                            <p>avid lover of birds</p>
+                        </li>
+                    </ul>
+
+                    <p>I am a brand new web developer, still learning the ropes but excited to be coding all the same.</p>
+                        
+                    <p>In my spare time I enjoy creating stories set in fantastical worlds and making artwork to go along with them. Feathered creatures are my favourite kinds of animals &mdash; I have a supreme soft spot for cockatiels and Silkie chickens!</p>
+                </section>
+            </div>
+
+            <div class="content-container">
+                <div id="portrait">
+                    <img src="./assets/images/profile-img-square.jpg" alt="Portrait of Sushan Yue" />
+                </div>
+            </div>   
+        </section>
+
+        <!-- 'portfolio' section -->
+        <section class="portfolio-row" id="portfolio">
+            <!-- 'portfolio' has a number of flex children -->
+
+            <!-- section for opening text -->
+            <div id="portfolio-text-container">
+                <section id="portfolio-text">
+                    <h2>Recent Works</h2>
+                    <p>Take a look at my latest projects.</p>
+                </section>
+            </div>
+
+                <!-- the main application display (big) -->
+                <section id="showcase-container">
+                    <a id="showcase-card" href="https://atlantablack.github.io/P02-Flexbox/">
+                        <img src="./assets/images/yoshi-bg-cropped.jpg" alt="Application 1 (Showcase)" />
+                        <p>CSS Snippet Cheatsheet</p>
+                    </a>
+                </section>
+            
+                <!-- the following four application displays (smaller) -->
+                <section class="portfolio-container">
+                    <a class="gallery-card" href="https://atlantablack.github.io/HW01_Code_Refactor/">
+                        <img src="./assets/images/yoshi-bg-cropped.jpg" alt="Application 2" />
+                        <p>Horiseon Code Refactor</p>
+                    </a>
+                </section>
+
+                <section class="portfolio-container">
+                    <a class="gallery-card" href="https://atlantablack.github.io/P01-Landing-Page/">
+                        <img src="./assets/images/aged-grunge-wall.jpg" alt="Application 3" />
+                        <p>Practice Landing Page</p>
+                    </a>
+                </section>
+
+                <section class="portfolio-container">
+                    <a class="gallery-card" href="https://google.com">
+                        <img src="./assets/images/starfield-bg.jpg" alt="Application 4" />
+                        <p>Application 4</p>
+                    </a>
+                </section>
+
+                <section class="portfolio-container">
+                    <a class="gallery-card" href="https://google.com">
+                        <!-- No image here so background colour can be viewed -->
+                        <p>Application 5</p>
+                    </a>
+                </section>
+        </section>
+
+        <!-- contact section -->
+        <section class="row" id="contact">
+            <!-- 'contact' has two flex children -->
+
+            <!-- this section contains the contact form -->
+            <div class="content-container">
+                <section class="content-card">
+                    <h2 id="contact-form-h2" class="italicised">Let's Chat!</h2>
+                    <p class="line-break">Want to talk web or art? 
+                        Use the contact form below to get in touch!</p>
+
+                    <form class="contact-form">
+                        <label for="name">Your name:</label>
+                        <input type="text" id="name" name="name" placeholder="Write your name here" />
+                   
+                        <label for="message">Your message:</label>
+                        <textarea id="message" name="message" placeholder="Write your message here"></textarea>
+                    
+                        <button id="send-message">Send</button>
+                    </form>
+                </section>
+            </div>
+
+            <!-- this section has links to additional platforms for users to visit me on  -->
+            <div class="content-container">
+                <section class="content-card">
+                    <h2 class="italicised">Additional Contact Options</h2>
+                    <p class="line-break">Can't get enough of me? 
+                        I am also on GitHub and Instagram!</p>
+
+                    <p>The links below will take you to my profiles. If you prefer sending direct emails, there is a handy email link at the end as well.</p>
+                    
+                    <ul class="contact-platforms">
+                       <li class="platforms-list">
+                            <a href="https://GitHub.com"><img src="./assets/images/icon-GitHub.png" alt="GitHub: Sushan Yue" />
+                            <p>GitHub</p></a>
+                        </li>
+                        <li class="platforms-list">
+                            <a href="https://Instagram.com"><img src="./assets/images/icon-instagram.png" alt="Instagram: Sushan Yue" />
+                            <p>Instagram</p></a>
+                        </li>
+                        <li class="platforms-list">
+                            <a href="mailto:email.com"><img src="./assets/images/icon-email.png" alt="Email" />
+                            <p>Email</p></a>
+                        </li>
+                    </ul>
+                    <p>Looking forward to hearing from you!</p>
+                </section>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    <footer class="footer-row">
+        <div class="footer-container">
+            <h3>&copy; 2022 Sushan Yue</h3>
+        </div>
+    </footer>
+    
+</body>
+</html>

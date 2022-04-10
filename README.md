@@ -1,8 +1,8 @@
-# Professional Portfolio
+# Professional Portfolio (April 2022)
 
 ## Description
 
-A professional portfolio is an important thing for any web developer to have. A well-designed and functional (not to mention accessible) website is a great way to showcase their skills and projects, no matter if the audience is potential clients or simply the world at large.
+add add add
 
 ---
 
@@ -18,9 +18,9 @@ This application was built using:
 
 ## Usage
 
-[Link to deployed application via GitHub Pages](https://atlantablack.github.io/Portfolio/)
+[Link to deployed application via GitHub Pages](https://atlantablack.github.io/Portfolio_April22/)
 
-[Link to GitHub repository](https://github.com/AtlantaBlack/Portfolio)
+[Link to GitHub repository](https://github.com/AtlantaBlack/Portfolio_April22)
 
 ---
 

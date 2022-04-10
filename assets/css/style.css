@@ -21,20 +21,23 @@
 }
 
 * {
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1.5rem;
 }
 
-/* global element styling here */
+
+/* ----------------------- */
+    /* GLOBAL ELEMENTS */
+/* ----------------------- */
 
 body {
-    font-family: "Garamond", "Georgia", "Times New Roman", Times, serif;
+    font-family: "Vollkorn", "Garamond", "Georgia", "Times New Roman", Times, serif;
     background-color: var(--dark);
     color: var(--text);
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Garamond", "Georgia", "Times New Roman", Times, serif;
+    font-family: "Vollkorn", "Garamond", "Georgia", "Times New Roman", Times, serif;
     line-height: 1;
     margin: 1.5rem 0;
 }
@@ -44,12 +47,30 @@ h1 {
     color: var(--darkest);
 }
 
-h2 { 
+h2
+/* h2 > span */ { 
     font-size: 1.8rem;
     line-height: 2rem;
     color: var(--sand);
     text-align: center;
 }
+
+/* h2::before, 
+h2::after {
+    content: "";
+    display: inline-block;
+    width: 50%;
+    margin: 0 .5em 0 -55%;
+    vertical-align: middle;
+    border-bottom: 1px solid;
+  }
+  h2::after {
+    margin: 0 -55% 0 .5em;
+  }
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  } */
 
 h3 { 
     font-size: 1.2rem; 
@@ -63,31 +84,23 @@ p {
     line-height: 1.5rem;
 }
 
+/* specific class for italics to use as needed in html 
+(no semantic value here so that's why em is not being used) */
+.italicised {
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+
+/* ----------------------- */
+         /* LINKS */
+/* ----------------------- */
+
 a, a:hover {
     text-decoration: none;
     font-family: "Proxima Nova", "Europa", "Helvetica", Arial, sans-serif;
     font-weight: 200;
     text-transform: uppercase;
-}
-
-/* specific class for italics to use as needed in html 
-(no semantic value here so that's why em is not being used) */
-.italicised {
-    font-style: italic;
-}
-
-
-/* HEADER elements */
-
-/* global header elements placed towards the top, more specific classes towards the bottom */
-header, footer {
-    border: 1px solid var(--light);
-    background: var(--light) url(../images/textured-white.jpg) no-repeat;
-    background-size: cover;
-}
-
-header p {
-    text-align: left;
 }
 
 header a {
@@ -97,6 +110,11 @@ header a {
     padding: 0.5rem 0.65rem;
     border: 0.08rem solid var(--darkest);
     border-radius: 0.85rem;
+}
+
+.platforms-list a {
+    color: var(--lightest);
+    padding: 0.2rem 0.5rem;
 }
 
 /* platforms-list is in contact section */
@@ -112,6 +130,26 @@ header a:focus,
 header a:focus {
     outline: 0.12rem solid var(--focus-orange);
     border-color: var(--lightest);
+}
+
+.platforms-list a:focus {
+    outline: 0.1rem solid var(--focus-orange);
+}
+
+
+/* ----------------------- */
+        /* HEADER */
+/* ----------------------- */
+
+/* global header elements placed towards the top, more specific classes towards the bottom */
+header, footer {
+    border: 1px solid var(--light);
+    background: var(--light) url(../images/textured-white.jpg) no-repeat;
+    background-size: cover;
+}
+
+header p {
+    text-align: left;
 }
 
 /* adding min-height to ensure small screens can view the header as nicely as big screens */
@@ -152,7 +190,9 @@ header a:focus {
 }
 
 
-/* MAIN elements */
+/* ----------------------- */
+          /* MAIN */
+/* ----------------------- */
 
 /* this section row controls the flex in each of the following html blocks: 
 about, portfolio, contact  */
@@ -203,6 +243,8 @@ li p {
 }
 
 /* using pseudo elements to style the about-me list */
+
+
 
 .about-item::after {
     content: "•";
@@ -295,7 +337,8 @@ a#showcase-card {
     width: inherit;
     height: inherit;
     object-fit: cover;
-    object-position: top right;
+    object-position: center;
+    opacity: 50%;
 }
 
 /* styling for text associated with application display image */
@@ -339,7 +382,7 @@ a#showcase-card {
 
 /* MAIN: contact section */
 
-p.line-break {
+.line-break {
     white-space: pre-line;
 }
 
@@ -429,17 +472,10 @@ textarea:focus {
     display: flex;
 }
 
-.platforms-list a {
-    color: var(--lightest);
-    padding: 0.2rem 0.5rem;
-}
 
-.platforms-list a:focus {
-    outline: 0.1rem solid var(--focus-orange);
-}
-
-
-/* FOOTER elements */
+/* ----------------------- */
+        /* FOOTER */
+/* ----------------------- */
 
 footer {
     height: 6vh;
@@ -457,7 +493,9 @@ footer {
 }
 
 
-/* MEDIA QUERIES */
+/* ----------------------- */
+     /* MEDIA QUERIES */
+/* ----------------------- */
 
 /* the base css was made using mobile first design to suit the Galaxy Fold first (280px wide). Media queries scale upwards from 281px */
 

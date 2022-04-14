@@ -64,4 +64,5 @@ This application was built using:
 ## Contact
 
 [Sushan Yue @ GitHub](https://github.com/AtlantaBlack)
+
 [Sushan Yue @ LinkedIn](https://www.linkedin.com/in/sushan-yue/)

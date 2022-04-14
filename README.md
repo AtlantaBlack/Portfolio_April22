@@ -2,7 +2,7 @@
 
 ## Description
 
-add add add
+A professional portfolio to showcase the skills of a web developer.
 
 ---
 
@@ -13,6 +13,8 @@ This application was built using:
 * HTML
 
 * CSS
+
+* JavaScript
 
 ---
 
@@ -28,29 +30,28 @@ This application was built using:
 
 ![Screenshot of Professional Porfolio](assets/images/screenshot-portfolio.jpg?raw=true "Sushan Yue portfolio screenshot")
 
+![Screenshot of Professional Porfolio](assets/images/screenshot-portfolio-projects.jpg?raw=true "Sushan Yue portfolio projects screenshot")
+
+
 ---
 
 ## Demo
 
-![GIF of Professional Porfolio](assets/images/demo-portfolio.gif?raw=true "Sushan Yue portfolio demo")
+![Demo of Professional Porfolio](assets/images/demo-portfolio-april22.gif?raw=true "Sushan Yue portfolio demo")
 
 ---
 
 ## Resources
 
-[MDN Web Docs - Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
+[W3 Schools - How to make a collapsible](https://www.w3schools.com/howto/howto_js_collapsible.asp)
 
-[CSS Tricks - A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+[MDN Web Docs - scrollHeight](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollHeight)
 
-[CSS Tricks - Understanding Flex-Grow/Shrink/Basis](https://css-tricks.com/understanding-flex-grow-flex-shrink-and-flex-basis/)
-
-[Stack Overflow](https://stackoverflow.com/)
-
-[Shahed Nasser - Beginner CSS Grid Tutorial](https://blog.shahednasser.com/css-grid-tutorial-for-beginners/)
-
-[Log Rocket - Beginner guide to styling forms](https://blog.logrocket.com/how-to-style-forms-with-css-a-beginners-guide/)
+[JavaScript Tutorial - JavaScript Siblings](https://www.javascripttutorial.net/javascript-dom/javascript-siblings/)
 
 [Coolors - colour palette generator](https://coolors.co/?home)
+
+[Font Awesome icons](https://fontawesome.com/)
 
 ---
 

@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- google font 'Lora' -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
+    <!-- font awesome icons -->
+    <link href="https://use.fontawesome.com/releases/v6.1.0/css/all.css" rel="stylesheet"
+        integrity="sha384-eLT4eRYPHTmTsFGFAzjcCWX+wHfUInVWNm9YnwpiatljsZOwXtwV2Hh6sHM6zZD9" crossorigin="anonymous">
     <!-- reset stylesheet -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <!-- custom stylesheet -->
@@ -55,23 +54,25 @@
 
             <div class="content-container">
                 <section class="content-card">
-                    <h2 class="italicised"><span>Sushan Yue</span></h2>
+                    <h2 class="italicised">Sushan Yue</h2>
 
                     <ul class="about-list italicised">
                         <li class="about-item">
                             <p>fledgling web developer</p>
                         </li>
                         <li class="about-item">
-                            <p>bootcamp student</p>
+                            <p>illustrator</p>
                         </li>
                         <li class="about-item">
                             <p>avid lover of birds</p>
                         </li>
                     </ul>
 
-                    <p>I am a brand new web developer, still learning the ropes but excited to be coding all the same.</p>
-                        
-                    <p>In my spare time I enjoy creating stories set in fantastical worlds and making artwork to go along with them. Feathered creatures are my favourite kinds of animals &mdash; I have a supreme soft spot for cockatiels and Silkie chickens!</p>
+                    <p>My interest in web development began back in the early 2000s when Neopets was still a very big deal. I learnt HTML and CSS so I could make colourful webpages for my virtual pets and show them off.</p>
+
+                    <p>Today, I am completing a coding bootcamp for full-stack web development. Already I have built a number of responsive websites from the ground up, including a code quiz on JavaScript concepts, and a weather dashboard that can get you forecasts for any city in the world.</p> 
+
+                    <p>In April 2022, I took part in a fun little collaborative project. The app pairs a user with a Pokémon depending on that user's favourite music artist. Check it out below!</p>
                 </section>
             </div>
 
@@ -90,45 +91,89 @@
             <div id="portfolio-text-container">
                 <section id="portfolio-text">
                     <h2>Recent Works</h2>
-                    <p>Take a look at my latest projects.</p>
                 </section>
             </div>
 
                 <!-- the main application display (big) -->
                 <section id="showcase-container">
-                    <a id="showcase-card" href="https://github.com/jazzberriess/collab-what-pkmn-are-you">
-                        <img src="./assets/images/screenshot-pokemon.jpg" alt="Application 1 (showcase): Single red and white ball centred on a black screen" />
+                    <button id="showcase-card" class="collapsible">
+                        <img class="app-image" src="./assets/images/screenshot-pokemon.jpg" alt="Application 1 (showcase): Single red and white ball centred on a black screen" />
                         <p>What Kind of Pokémon Are You?</p>
-                    </a>
+                    </button>
+                    <div class="app-content">
+                        <p>A collaborative project to discover kind of pokemon you are based on your musical preferences.</p>
+                        <div class="link-padding">
+                            <a href="https://github.com/jazzberriess/collab-what-pkmn-are-you">Link to Repo</a>
+                        </div>
+                        <div class="link-padding">
+                            <a href="https://jazzberriess.github.io/collab-what-pkmn-are-you/">Link to App</a>
+                        </div>
+                    </div>
                 </section>
             
                 <!-- the following four application displays (smaller) -->
                 <section class="portfolio-container">
-                    <a class="gallery-card" href="https://github.com/AtlantaBlack/HW06_Weather_Dashboard">
-                        <img src="./assets/images/screenshot-weather-dashboard.jpg" alt="Application 2: Weather Dashboard" />
+                    <button class="gallery-card collapsible">
+                        <img class="app-image" src="./assets/images/screenshot-weather-dashboard.jpg" alt="Application 2: Weather Dashboard" />
                         <p>Weather Dashboard</p>
-                    </a>
+                    </button>
+                    <div class="app-content">
+                        <p>An application that shows current weather and future forecast for specified city.</p>
+                        <div class="link-padding">
+                            <a href="https://github.com/AtlantaBlack/Weather_Dashboard">Link to Repo</a>
+                        </div>
+                        <div class="link-padding">
+                            <a href="https://atlantablack.github.io/Weather_Dashboard/">Link to App</a>
+                        </div>                    
+                    </div>
                 </section>
 
                 <section class="portfolio-container">
-                    <a class="gallery-card" href="https://github.com/AtlantaBlack/Code_Quiz">
-                        <img src="./assets/images/screenshot-code-quiz-start.jpg" alt="Application 3: Javascript Code Quiz" />
+                    <button class="gallery-card collapsible">
+                        <img class="app-image" src="./assets/images/screenshot-code-quiz-start.jpg" alt="Application 3: Javascript Code Quiz" />
                         <p>Javascript Code Quiz</p>
-                    </a>
+                    </button>
+                    <div class="app-content">
+                        <p>A quiz on coding concepts built using Javascript and web APIs.</p>
+                        <div class="link-padding">
+                            <a href="https://github.com/AtlantaBlack/Code_Quiz">Link to Repo</a>
+                        </div>
+                        <div class="link-padding">
+                            <a href="https://atlantablack.github.io/Code_Quiz/">Link to App</a>
+                        </div>
+                    </div>
                 </section>
 
                 <section class="portfolio-container">
-                    <a class="gallery-card" href="https://google.com">
-                        <img src="./assets/images/starfield-bg.jpg" alt="Application 4" />
-                        <p>Application 4</p>
-                    </a>
+                    <button class="gallery-card collapsible">
+                        <img class="app-image" src="./assets/images/screenshot-scheduler.jpg" alt="Application 4: Work Day Scheduler" />
+                        <p>Work Day Scheduler</p>
+                    </button>
+                    <div class="app-content">
+                        <p>An interactive scheduler to help with planning the work day.</p>
+                        <div class="link-padding">
+                            <a href="https://github.com/AtlantaBlack/Work_Day_Scheduler">Link to Repo</a>
+                        </div>
+                        <div class="link-padding">
+                            <a href="https://atlantablack.github.io/Work_Day_Scheduler/">Link to App</a>
+                        </div>                        
+                    </div>
                 </section>
 
                 <section class="portfolio-container">
-                    <a class="gallery-card" href="https://google.com">
-                        <!-- No image here so background colour can be viewed -->
-                        <p>Application 5</p>
-                    </a>
+                    <button class="gallery-card collapsible">
+                        <img class="app-image" src="./assets/images/screenshot-pg-05-password.jpg" alt="Application 5: Password Generator" />
+                        <p>Password Generator</p>
+                    </button>
+                    <div class="app-content">
+                        <p>JavaScript program that generates a random password using browser prompts.</p>
+                        <div class="link-padding">
+                            <a href="https://github.com/AtlantaBlack/Password_Generator">Link to Repo</a>
+                        </div>
+                        <div class="link-padding">
+                            <a href="https://atlantablack.github.io/Password_Generator/">Link to App</a>
+                        </div>                    
+                    </div>
                 </section>
         </section>
 
@@ -139,8 +184,8 @@
             <!-- this section contains the contact form -->
             <div class="content-container">
                 <section class="content-card">
-                    <h2 id="contact-form-h2" class="italicised">Let's Chat!</h2>
-                    <p class="line-break">Want to talk web or art? 
+                    <h2 class="contact-form-h2 italicised">Let's Chat!</h2>
+                    <p class="line-break">Want to talk web? 
                         Use the contact form below to get in touch!</p>
 
                     <form class="contact-form">
@@ -158,26 +203,33 @@
             <!-- this section has links to additional platforms for users to visit me on  -->
             <div class="content-container">
                 <section class="content-card">
-                    <h2 class="italicised">Additional Contact Options</h2>
-                    <p class="line-break">Can't get enough of me? 
-                        I am also on GitHub and Instagram!</p>
-
-                    <p>The links below will take you to my profiles. If you prefer sending direct emails, there is a handy email link at the end as well.</p>
+                    <h2 class="more-links italicised">Extra Links</h2>
+                    <p class="line-break">Want to see more?
+                        Feel free to check out my GitHub and LinkedIn pages.</p>
                     
                     <ul class="contact-platforms">
                        <li class="platforms-list">
-                            <a href="https://GitHub.com"><img src="./assets/images/icon-GitHub.png" alt="GitHub: Sushan Yue" />
+                            <a href="https://github.com/AtlantaBlack"><i class="fa-brands fa-github"></i>
                             <p>GitHub</p></a>
                         </li>
                         <li class="platforms-list">
-                            <a href="https://Instagram.com"><img src="./assets/images/icon-instagram.png" alt="Instagram: Sushan Yue" />
-                            <p>Instagram</p></a>
-                        </li>
-                        <li class="platforms-list">
-                            <a href="mailto:email.com"><img src="./assets/images/icon-email.png" alt="Email" />
-                            <p>Email</p></a>
+                            <a href="https://www.linkedin.com/in/sushan-yue/"><i class="fa-brands fa-linkedin"></i>
+                            <p>LinkedIn</p></a>
                         </li>
                     </ul>
+
+                    <h2 class="more-links italicised">Resume</h2>
+                    <p class="line-break">My resume is available below.
+                        (<span class="italicised">Note:</span> The resume is password-protected for privacy.)
+                    </p>
+                    
+                    <ul class="contact-platforms">
+                       <li class="platforms-list">
+                            <a href="./assets/docs/Sushan-Yue_Technical-ResumeA.pdf"><i class="fa-solid fa-file"></i>
+                            <p>Resume</p></a>
+                        </li>
+                    </ul>
+
                     <p>Looking forward to hearing from you!</p>
                 </section>
             </div>
@@ -193,5 +245,6 @@
         </div>
     </footer>
     
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>

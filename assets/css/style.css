@@ -21,7 +21,7 @@
 }
 
 * {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1.5rem;
 }
 
@@ -31,13 +31,13 @@
 /* ----------------------- */
 
 body {
-    font-family: "Vollkorn", "Garamond", "Georgia", "Times New Roman", Times, serif;
+    font-family: "Garamond", "Georgia", "Times New Roman", Times, serif;
     background-color: var(--dark);
     color: var(--text);
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Vollkorn", "Garamond", "Georgia", "Times New Roman", Times, serif;
+    font-family: "Garamond", "Georgia", "Times New Roman", Times, serif;
     line-height: 1;
     margin: 1.5rem 0;
 }
@@ -47,30 +47,12 @@ h1 {
     color: var(--darkest);
 }
 
-h2
-/* h2 > span */ { 
+h2 { 
     font-size: 1.8rem;
     line-height: 2rem;
     color: var(--sand);
     text-align: center;
 }
-
-/* h2::before, 
-h2::after {
-    content: "";
-    display: inline-block;
-    width: 50%;
-    margin: 0 .5em 0 -55%;
-    vertical-align: middle;
-    border-bottom: 1px solid;
-  }
-  h2::after {
-    margin: 0 -55% 0 .5em;
-  }
-  span {
-    display: inline-block;
-    vertical-align: middle;
-  } */
 
 h3 { 
     font-size: 1.2rem; 
@@ -84,8 +66,6 @@ p {
     line-height: 1.5rem;
 }
 
-/* specific class for italics to use as needed in html 
-(no semantic value here so that's why em is not being used) */
 .italicised {
     font-style: italic;
     letter-spacing: 0.5px;
@@ -113,18 +93,34 @@ header a {
 }
 
 .platforms-list a {
+    background-color: var(--serene-green);
+    width: 100%;
     color: var(--lightest);
+    border: 2px solid var(--serene-green);
+    padding: 0.2rem 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.app-content a {
+    color: var(--darkest);
     padding: 0.2rem 0.5rem;
 }
 
-/* platforms-list is in contact section */
 header a:hover,
 header a:focus,
-.platforms-list a:hover,
-.platforms-list a:focus {
+.app-content a:hover,
+.app-content a:focus {
     background-color: var(--serene-green);
     color: var(--lightest);
     border-color: var(--serene-green);
+}
+
+.platforms-list a:hover,
+.platforms-list a:focus {
+    background-color: var(--eggshell);
+    color: var(--text);
+    border-color: var(--text);
 }
 
 header a:focus {
@@ -141,7 +137,6 @@ header a:focus {
         /* HEADER */
 /* ----------------------- */
 
-/* global header elements placed towards the top, more specific classes towards the bottom */
 header, footer {
     border: 1px solid var(--light);
     background: var(--light) url(../images/textured-white.jpg) no-repeat;
@@ -152,7 +147,6 @@ header p {
     text-align: left;
 }
 
-/* adding min-height to ensure small screens can view the header as nicely as big screens */
 .header-row {
     display: flex;
     flex-flow: column wrap;
@@ -166,7 +160,6 @@ header p {
     flex: 1 0 100%;
 }
 
-/* more contact-form styling is found towards the bottom of the css sheet */
 .intro,
 .contact-form input {
     margin-bottom: 1.5rem;
@@ -194,9 +187,8 @@ header p {
           /* MAIN */
 /* ----------------------- */
 
-/* this section row controls the flex in each of the following html blocks: 
-about, portfolio, contact  */
-section.row {
+
+.row {
     display: flex;
     flex-flow: row wrap;
     align-items: stretch;
@@ -206,7 +198,6 @@ section.row {
 
 /* MAIN: about me section */
 
-/* style the flex container for both 'about me' and 'contact' sections */
 .content-container {
     flex: 1 0 100%;
     max-width: 100%;
@@ -218,7 +209,6 @@ section.row {
     margin: 0.5rem 0;
 }
 
-/* styling of actual content for both 'about me' and 'contact' sections */
 .content-card {
     display: flex;
     flex-direction: column;
@@ -242,17 +232,12 @@ li p {
     line-height: 0.5rem;
 }
 
-/* using pseudo elements to style the about-me list */
-
-
-
 .about-item::after {
     content: "•";
     color: var(--dessert-night);
     padding-right: 0.3rem;
 }
 
-/* portrait box won't appear anywhere else so it gets its own ID */
 #portrait {
     display: flex;
     min-height: 100%;
@@ -267,7 +252,6 @@ li p {
 
 /* MAIN: portfolio section */
 
-/* this one h2 the colour should be dark because the section has a light background colour */
 .portfolio-row h2 {
     color: var(--darkest);
 }
@@ -280,7 +264,6 @@ li p {
     padding: 0;
 }
 
-/* the following two classes are for the intro text to the portfolio section */
 #portfolio-text-container {
     flex: 0 0 100%;
     margin-bottom: 1.5rem;
@@ -295,53 +278,48 @@ li p {
     margin-top: 1rem;
 }
 
-/* showcase container is for the main application */
+.portfolio-container,
 #showcase-container {
-    flex: 3 0 100%;
     width: 100%;
-    height: 50vh;
     box-shadow: 0 0.2rem 0.4rem rgba(73, 84, 100, 0.3);
     margin-bottom: 1.5rem;
 }
 
-/* styling the following four application displays, which are smaller */
 .portfolio-container {
     flex: 1 0 auto;
-    width: 100%;
-    height: 25vh;
-    box-shadow: 0 0.2rem 0.4rem rgba(73, 84, 100, 0.3);
-    margin-bottom: 1.5rem;
+    min-height: 25vh;
 }
 
-/* make the application display cards as links */
-a.gallery-card,
-a#showcase-card {
+#showcase-container {
+    flex: 3 0 100%;
+    min-height: 50vh;
+}
+
+.gallery-card,
+#showcase-card {
     position: relative;
     display: block;
     width: 100%;
     height: 25vh;
-    background-color: var(--serene-green);
+    background-color: var(--text);
     border: 0;
-    border-radius: 0;
     padding: 0;
+    transition: all 0.2s ease-out;
 }
 
-/* specify different height for showcase application */
-a#showcase-card {
+#showcase-card {
     height: 50vh;
 }
 
-/* making sure display card images fill up the holding container */
-.gallery-card img,
-#showcase-card img {
+.app-image {
     width: inherit;
     height: inherit;
     object-fit: cover;
     object-position: center;
     opacity: 50%;
+    transition: all 0.2s ease-out;
 }
 
-/* styling for text associated with application display image */
 .gallery-card p,
 #showcase-card p {
     position: absolute;
@@ -349,24 +327,35 @@ a#showcase-card {
     bottom: 5%;
     left: 0;
     text-align: left;
-    background-image: linear-gradient(to left, rgba(255,255,255,0.5), var(--lightest));
-    color: var(--darkest);
+    text-decoration: none;
+    font-family: "Proxima Nova", "Europa", "Helvetica", Arial, sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+    background: linear-gradient(to right, var(--darkest) 45%, rgba(255,255,255,0));
+    color: var(--lightest);
     padding: 0.5rem;
+    transition: all 0.2s ease-out;
 }
 
-/* hover effects for both showcase and regular app displays below */
+.app-image:hover,
+.app-image:active {
+    opacity: 100%;
+}
 .gallery-card:hover,
-#showcase-card:hover {
-    box-shadow: 0 0.2rem 0.4rem var(--darkest);
-    transition: all 0.2s ease-out;
+#showcase-card:hover,
+.active {
+    box-shadow: 0 0.2rem 0.4rem var(--serene-green);
+    opacity: 100%;
 }
 
 .gallery-card:hover p,
 .gallery-card:focus p,
 #showcase-card:hover p,
 #showcase-card:focus p {
-    background-image: linear-gradient(to right, var(--darkest), rgba(255,255,255,0));
-    color: var(--lightest);
+    background: var(--lightest);
+    color: var(--darkest);
+    outline: 0.1rem solid white;
+    box-shadow: 0 0 0 0.6rem var(--serene-green);
 }
 
 .gallery-card:focus,
@@ -374,9 +363,19 @@ a#showcase-card {
     outline: 0.18rem solid var(--focus-orange);
 }
 
-.gallery-card:focus p,
-#showcase-card:focus p {
-    outline: 0.12rem dashed var(--inky);
+.app-content {
+    max-height: 0;
+    overflow: hidden;
+    color: var(--text);
+    text-align: center;
+    background-color: var(--lightest);
+    padding: 0 2rem;
+    transition: max-height 0.2s ease-out;
+}
+
+.link-padding {
+    padding-bottom: 1rem;
+    display: inline-block;
 }
 
 
@@ -386,9 +385,15 @@ a#showcase-card {
     white-space: pre-line;
 }
 
-/* contact form styling */
-#contact-form-h2 {
+.contact-form-h2 {
     margin-bottom: 0rem;
+    color: var(--dessert);
+}
+
+.more-links {
+    margin-top: 1.2rem;
+    margin-bottom: 0.2rem;
+    color: var(--dessert);
 }
 
 .contact-form {
@@ -402,12 +407,10 @@ a#showcase-card {
     margin-bottom: 0.4rem;
 }
 
-/* make the placeholder text a different colour */
 ::placeholder {
     color: var(--dark);
 }
 
-/* style the input and textareas */
 input[type=text], textarea {
     min-width: 100%;
     font-family: "Proxima Nova", "Europa", "Helvetica", Arial, sans-serif;
@@ -419,7 +422,6 @@ input[type=text], textarea {
     padding:10px;
 }
 
-/* textarea is adjustable, but putting a minimum on height and width so users don't mess up the text area */
 textarea {
     min-width: 100%;
     max-width: 40vw;
@@ -433,17 +435,16 @@ textarea:focus {
     box-shadow: 0 0 0.7rem 0.2rem var(--forest-green);
 }
 
-/* styling the button */
 .contact-form button {
     -webkit-appearance: none;
     appearance: none;
     width: 150px;
-    background-color: var(--eggshell);
-    color: var(--darkest);
+    background-color: var(--serene-green);
+    color: var(--lightest);
     font-family: "Proxima Nova", "Europa", "Helvetica", Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 300;
-    border: 0.1rem solid var(--inky);
+    border: 0.1rem solid var(--serene-green);
     border-radius: 0.5rem;
     padding: 0.25rem;
     margin-top: 1rem;
@@ -451,9 +452,9 @@ textarea:focus {
 
 .contact-form button:hover,
 .contact-form button:focus {
-    background-color: var(--serene-green);
-    color: var(--lightest);
-    border-color: var(--lightest);
+    background-color: var(--eggshell);
+    color: var(--text);
+    border-color: var(--inky);
     cursor: pointer;
 }
 
@@ -461,7 +462,6 @@ textarea:focus {
     outline: 0.15rem solid var(--focus-orange);
 }
 
-/* styling for 'additional platforms' below */
 .contact-platforms li img {
     width: 1rem;
     height: 1rem;
@@ -492,33 +492,26 @@ footer {
     flex: 1;
 }
 
-
 /* ----------------------- */
      /* MEDIA QUERIES */
 /* ----------------------- */
-
-/* the base css was made using mobile first design to suit the Galaxy Fold first (280px wide). Media queries scale upwards from 281px */
 
 @media screen and (min-width: 374px) {
     .header-container {
         width: 100%;
     }
-
     .main-nav li {
         flex: 0;
     }
-
-    section.row {
+    .row {
         margin-left: 0.5rem;
         margin-right: 0.5rem;
     }
-
     .about-list::before {
     content: "•";
     color: var(--dessert-night);
     padding-right: 0.3rem;
-}
-
+    }
     .content-card {
         padding: 1rem 2.5rem;
     }
@@ -529,21 +522,17 @@ footer {
         flex-direction: row;
         margin: 6%;
     }
-
     .main-nav {
         justify-content: flex-end;
     }
-
     .main-nav li {
         line-height: 1rem;
         margin-left: 2rem;
     }
-
-    section.row {
+    .row {
         margin-left: 2rem;
         margin-right: 2rem;
     }
-    
     .portfolio-row {
         flex-direction: row;
         padding: 2rem;
@@ -551,16 +540,27 @@ footer {
 }
 
 @media screen and (min-width: 770px) {
-    section.row {
-        justify-content: space-between;
-    }
-    
     .portfolio-row {
-        padding: 1rem 2rem;
+        padding: 1rem 4rem;
     }
 
+}
+
+@media screen and (min-width: 992px) {
+    .row {
+        justify-content: space-between;
+    }    
+    .portfolio-row {
+        padding: 1rem 6rem;
+    }
     .content-container, .portfolio-container {
         flex: 1 0 48%;
         max-width: 48%;
+    }    
+}
+
+@media screen and (min-width: 1200px) {
+    .portfolio-row {
+        padding: 1rem 10rem;
     }
 }

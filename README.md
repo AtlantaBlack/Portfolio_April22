@@ -11,9 +11,7 @@ A professional portfolio to showcase the skills of a web developer.
 This application was built using: 
 
 * HTML
-
 * CSS
-
 * JavaScript
 
 ---
